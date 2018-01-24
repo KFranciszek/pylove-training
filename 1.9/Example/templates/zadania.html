@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista zadań</title>
+</head>
+<body>
+    <h1>Lista zadań</h1>
+    {% if zadania %}
+        <ul>
+            {% for zadanie in zadania %}
+                <li>{{ zadanie }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        Brak zadań
+    {% endif %}
+
+    <br><br>
+    <form method="post">
+        Nowe zadanie
+        <input type="text" name="zadanie">
+        <button type="submit">Dodaj</button>
+    </form>
+</body>
+</html>

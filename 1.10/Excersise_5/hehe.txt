@@ -1,0 +1,5 @@
+Kusznicy poruszają się tak jak piony, ale mogą bić figury przeciwnika na odległość. Haubica może ruszać się trzy pola do przodu, jedno do tyłu i dwa na skos. Do przy trafieniu krytycznym bije dodatkową figurę przeciwnika.
+
+No właśnie, wraz z nowym dodatkiem zniknęło tradycyjne "bicie". Twórcy gry wprowadzili zupełnie nowy system walki oparty na parametrach siły dla każdej jednostki modyfikowanych wynikiem rzutu 9-ściennymi kostkami.
+
+Kolejną innowacją jest przełamanie dotychczasowej symetrii szachów przez wprowadzenie mocy specjalnych. Gry nie kończą się też, jak dawniej, matem. Wygrywa osoba, która zdobędzie więcej punktów zwycięstwa.

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 2</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+<h2>Lista pracowników</h2>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Informacje szczegółowe</th>
+    </tr>
+    {% for pracownik in pracownicy %}
+    <tr>
+        <td> {{ pracownik.id }}</td>
+        <td> {{ pracownik.imie }} </td>
+        <td> {{ pracownik.nazwisko }} </td>
+        <td> <a href="/pracownik?id={{ pracownik.id }}">Szczegóły</a></td>
+        <!--<td><a href="pracownik/id={{ pracownik.id }}" target="_blank">Szczegóły</a></td>-->
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<hr>
+<h3>Dodaj nowego pracownika</h3>
+<form action="/pracownicy" method="post">
+    <label hidden for="id">Id</label>
+    <input hidden type="number" id="id" name="id" value="{{ pracownicy|length + 1}}">
+    <label for="imie">Imię: </label>
+    <input name="imie" id="imie" type="text" maxlength="30" required>
+    <label for="nazwisko">Nazwisko: </label>
+    <input type="text" name="nazwisko" id="nazwisko" maxlength="100" required>
+    <label for="placa">Płaca: </label>
+    <input type="number" min="0" name="placa" id="placa" required>
+    <label for="stanowisko">Opis stanowiska: </label>
+    <input type="tekst" id="stanowisko" name="stanowisko" maxlength="150" required>
+    <br>
+    <br>
+    <button type="submit">Dodaj pracownika</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Excersise 6c</title>
+</head>
+<body>
+    <form action="/form" method="post">
+        <label for="input1">Liczba 1 </label>
+        <input type="number" name="input1" id="input1">
+        <label for="input2">Liczba 2 </label>
+        <input type="number" name="input2" id="input2">
+        <button type="submit">Przelicz</button>
+    </form>
+    {% if liczba1 and liczba2 %}
+        {% if is_valid %}
+    Suma podanych liczb wynosi: {{ liczba1 + liczba2 }}
+        {% else %}
+    Podano niepoprawne dane!
+    {% endif %}
+    {% else %}
+    Podaj liczby które mają być zsumowane.
+    {% endif %}
+</body>
+</html>

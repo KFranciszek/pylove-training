@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dane pracownika</title>
+</head>
+<body>
+<a href="/pracownicy"> Wróć</a>
+<br>
+<h2>{{ pracownik.imie}} {{ pracownik.nazwisko }} </h2>
+    <b> Id: </b> {{ pracownik["id"] }}
+    <b>Imię: </b> {{ pracownik["imie"] }}
+    <b>Nazwisko: </b> {{ pracownik["nazwisko"] }}
+    <b>Płaca: </b> {{ pracownik["placa"] }}
+    <b>Opis stanowiska: </b> {{ pracownik["stanowisko"] }}
+<br>
+<br>
+<form action="/pracownik/delete?id={{ pracownik.id }}" method="post">
+    <button type="submit">Usuń pracownika</button>
+</form>
+</body>
+</html>

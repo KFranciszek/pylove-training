@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 4</title>
+</head>
+<body>
+<h1>{{naglowek}}</h1>
+<table>
+    <tr>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Wiek</th>
+    </tr>
+    {% for person in persons %}
+    <tr>
+        <td>{{ person["name"] }}</td>
+        <!--<td>{{ person.name }}</td>-->
+        <td>{{ person["surname"] }}</td>
+        <td>{{ person["age"] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

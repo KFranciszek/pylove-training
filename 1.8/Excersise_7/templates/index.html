@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Excersise 7</title>
+</head>
+<body>
+<h1>List of Bands</h1>
+<form action="/search" method="get">
+    <label>Zapytanie: </label>
+    <input type="text" name="query">
+    <button type="submit">Search</button>
+</form>
+{% if bands != [] %}
+<ul>
+    {% for band in bands %}
+    <li> {{ band }} </li>
+    {% endfor %}
+</ul>
+{% else %}
+Brak wyników pasujących do zapytania.
+{% endif %}
+</body>
+</html>

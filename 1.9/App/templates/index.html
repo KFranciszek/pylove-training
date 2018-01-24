@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadjęcia 9</title>
+</head>
+<body>
+<h1>Najlepsze bankowe konto internetowe</h1>
+<br>
+<h3>Informacje o koncie</h3>
+Stan konta użytkownika: <b> {{ stan_konta }} PLN</b>
+<hr>
+<h3>Nowy przelew</h3>
+<form action="/konto" method="post">
+    <label for="nr_konta">Numer konta odbiorcy: </label>
+    <input id="nr_konta" name="nr_konta" type="text">
+    <label for="kwota">Kwota: </label>
+    <input type="number" id="kwota" name="kwota">
+    <button type="submit">Wyślij przelew</button>
+</form>
+<hr>
+<h3>Lista ostatnich przelewów</h3>
+{% if przelewy %}
+<table border="1">
+    <tr>
+        <th style="padding:10px">Odbiorca</th>
+        <th style="padding:10px">Kwota</th>
+    </tr>
+{% for przelew in przelewy %}
+<tr>
+    <td style="padding:5px">{{ przelew['nr_konta'] }}</td>
+    <td style="padding:5px">{{ przelew['kwota'] }}</td>
+</tr>
+{% endfor %}
+</table>
+{% else %}
+Brak przelewów
+{% endif %}
+</body>
+</html>

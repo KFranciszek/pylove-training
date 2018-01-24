@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add user form</title>
+</head>
+<body>
+<form action="/users" method="post">
+    <label for="name">Nazwa użytkownika </label>
+    <input type="text" id="name" name="name" />
+    <label for="pass">Hasło </label>
+    <input type="password" id="pass" name="pass" />
+    <button type="submit">Dodaj użytkownika</button>
+</form>
+{{ message }}
+</body>
+</html>
